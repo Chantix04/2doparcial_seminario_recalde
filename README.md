@@ -16,9 +16,9 @@ En primer lugar, creamos las imágenes necesarias para nuestros servicios utiliz
     docker build -t soap .
     ```
 
-3. **Cliente:**
+3. **Front:**
     ```bash
-    docker build -t cliente .
+    docker build -t front .
     ```
 
 4. **MySQL:**
@@ -42,7 +42,7 @@ Luego, procedemos a desplegar nuestros servicios utilizando Docker Swarm:
 
 ### Información Adicional:
 
-- El servidor SOAP está configurado para escuchar en el puerto 5555.
-- El servidor web está alojado en `localhost:8080`.
+- El servidor SOAP está configurado para escuchar en el puerto 8888.
+- El servidor web está alojado en `localhost:8081`.
 - Para poder visualizar la vista del html debe ingresar en http://127.0.0.1:5500/client/index.html
 
