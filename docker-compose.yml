@@ -15,7 +15,7 @@ services:
   service-nodejs:
     image: rest
     ports:
-      - "5050:5050"
+      - "8080:8080"
     networks:
       - mynetwork
     deploy:
@@ -24,7 +24,7 @@ services:
   service-soap:
     image: soap
     ports:
-      - "5555:5555"
+      - "8888:8888"
     networks:
       - mynetwork
     deploy:
@@ -33,7 +33,7 @@ services:
   service-cliente   :
     image: cliente
     ports:
-      - "8080:80"
+      - "8081:80"
     networks:
       - mynetwork
     deploy:

@@ -27,8 +27,8 @@ const consultarUsuarios = async () => {
 app.use(express.static(__dirname));
 app.use(cors());
 
-app.listen(4000, () => {
-  console.log('Servidor SOAP escuchando en el puerto 4000');
+app.listen(8888, () => {
+  console.log('Servidor SOAP escuchando en el puerto 8888');
 });
 
 const xml = require('fs').readFileSync('consultarUsuarios.wsdl', 'utf8');

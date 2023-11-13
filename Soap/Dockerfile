@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port on which the application will run
-EXPOSE 5555
+EXPOSE 8888
 
 # Command to run the application when the container starts
 CMD ["node", "index.js"]

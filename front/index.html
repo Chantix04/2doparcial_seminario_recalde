@@ -74,7 +74,7 @@
           const activo = document.querySelector('select[name="activo"]').value;
 
           const response = await fetch(
-            "http://localhost:5050/insertar_con_rest",
+            "http://localhost:8080/insertar_con_rest",
             {
               method: "POST",
               headers: {
@@ -97,7 +97,7 @@
         myHeaders.append("Content-Type", "text/xml");
 
         var raw =
-          '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://localhost:4000/consultar_usuarios">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <web:consultarUsuarios/>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>\r\n';
+          '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://localhost:8888/consultar_con_soap">\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <web:consultarUsuarios/>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>\r\n';
 
         var requestOptions = {
           method: "POST",
@@ -106,7 +106,7 @@
           redirect: "follow",
         };
 
-        fetch("http://localhost:4000/consultar_usuarios", requestOptions)
+        fetch("http://localhost:8888/consultar_con_soap", requestOptions)
           .then((response) => response.text())
           .then((result) => {
             updateTable(result);
@@ -125,7 +125,7 @@
 
           // Obtener la lista de usuarios
           const usuarios = xmlDoc.getElementsByTagNameNS(
-            "http://localhost:4000/consultar_usuarios",
+            "http://localhost:8888/consultar_con_soap",
             "usuarios",
             "usuarios"
           );

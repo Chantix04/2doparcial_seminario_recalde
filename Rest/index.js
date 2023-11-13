@@ -49,6 +49,6 @@ app.get('/consultar_con_rest', async (req, res) => {
     }
 });
 
-app.listen(5050, () => {
-    console.log(`Servidor REST en funcionamiento en el puerto 5050`);
+app.listen(8080, () => {
+    console.log(`Servidor REST en funcionamiento en el puerto 8080`);
 });
